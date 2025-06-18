@@ -1,7 +1,0 @@
-C:\Infinite_dotnet\Csharp\First_dotnetproj\First_dotnetproj\bin\Debug\First_dotnetproj.exe.config
-C:\Infinite_dotnet\Csharp\First_dotnetproj\First_dotnetproj\bin\Debug\First_dotnetproj.exe
-C:\Infinite_dotnet\Csharp\First_dotnetproj\First_dotnetproj\bin\Debug\First_dotnetproj.pdb
-C:\Infinite_dotnet\Csharp\First_dotnetproj\First_dotnetproj\obj\Debug\First_dotnetproj.csproj.AssemblyReference.cache
-C:\Infinite_dotnet\Csharp\First_dotnetproj\First_dotnetproj\obj\Debug\First_dotnetproj.csproj.CoreCompileInputs.cache
-C:\Infinite_dotnet\Csharp\First_dotnetproj\First_dotnetproj\obj\Debug\First_dotnetproj.exe
-C:\Infinite_dotnet\Csharp\First_dotnetproj\First_dotnetproj\obj\Debug\First_dotnetproj.pdb

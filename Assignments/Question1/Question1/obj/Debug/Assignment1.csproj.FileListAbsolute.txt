@@ -1,0 +1,6 @@
+C:\Infinite_dotnet\Assignments\Question1\Question1\bin\Debug\Question1.exe.config
+C:\Infinite_dotnet\Assignments\Question1\Question1\bin\Debug\Question1.exe
+C:\Infinite_dotnet\Assignments\Question1\Question1\bin\Debug\Question1.pdb
+C:\Infinite_dotnet\Assignments\Question1\Question1\obj\Debug\Assignment1.csproj.CoreCompileInputs.cache
+C:\Infinite_dotnet\Assignments\Question1\Question1\obj\Debug\Question1.exe
+C:\Infinite_dotnet\Assignments\Question1\Question1\obj\Debug\Question1.pdb

@@ -1,6 +1,0 @@
-C:\Infinite_dotnet\Csharp\First_dotnetproj\First_dotnetproj\bin\Release\First_dotnetproj.exe.config
-C:\Infinite_dotnet\Csharp\First_dotnetproj\First_dotnetproj\bin\Release\First_dotnetproj.exe
-C:\Infinite_dotnet\Csharp\First_dotnetproj\First_dotnetproj\bin\Release\First_dotnetproj.pdb
-C:\Infinite_dotnet\Csharp\First_dotnetproj\First_dotnetproj\obj\Release\First_dotnetproj.csproj.CoreCompileInputs.cache
-C:\Infinite_dotnet\Csharp\First_dotnetproj\First_dotnetproj\obj\Release\First_dotnetproj.exe
-C:\Infinite_dotnet\Csharp\First_dotnetproj\First_dotnetproj\obj\Release\First_dotnetproj.pdb
