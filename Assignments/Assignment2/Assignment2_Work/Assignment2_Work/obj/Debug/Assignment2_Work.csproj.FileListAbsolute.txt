@@ -1,0 +1,7 @@
+C:\Infinite_dotnet\Assignments\Assignment2\Assignment2_Work\Assignment2_Work\bin\Debug\Assignment2_Work.exe.config
+C:\Infinite_dotnet\Assignments\Assignment2\Assignment2_Work\Assignment2_Work\bin\Debug\Assignment2_Work.exe
+C:\Infinite_dotnet\Assignments\Assignment2\Assignment2_Work\Assignment2_Work\bin\Debug\Assignment2_Work.pdb
+C:\Infinite_dotnet\Assignments\Assignment2\Assignment2_Work\Assignment2_Work\obj\Debug\Assignment2_Work.csproj.AssemblyReference.cache
+C:\Infinite_dotnet\Assignments\Assignment2\Assignment2_Work\Assignment2_Work\obj\Debug\Assignment2_Work.csproj.CoreCompileInputs.cache
+C:\Infinite_dotnet\Assignments\Assignment2\Assignment2_Work\Assignment2_Work\obj\Debug\Assignment2_Work.exe
+C:\Infinite_dotnet\Assignments\Assignment2\Assignment2_Work\Assignment2_Work\obj\Debug\Assignment2_Work.pdb
