@@ -1,0 +1,7 @@
+C:\Infinite_dotnet\CodeChallenges\CC1\CodeChallenge\CodeChallenge\bin\Debug\CodeChallenge.exe.config
+C:\Infinite_dotnet\CodeChallenges\CC1\CodeChallenge\CodeChallenge\bin\Debug\CodeChallenge.exe
+C:\Infinite_dotnet\CodeChallenges\CC1\CodeChallenge\CodeChallenge\bin\Debug\CodeChallenge.pdb
+C:\Infinite_dotnet\CodeChallenges\CC1\CodeChallenge\CodeChallenge\obj\Debug\CodeChallenge.csproj.AssemblyReference.cache
+C:\Infinite_dotnet\CodeChallenges\CC1\CodeChallenge\CodeChallenge\obj\Debug\CodeChallenge.csproj.CoreCompileInputs.cache
+C:\Infinite_dotnet\CodeChallenges\CC1\CodeChallenge\CodeChallenge\obj\Debug\CodeChallenge.exe
+C:\Infinite_dotnet\CodeChallenges\CC1\CodeChallenge\CodeChallenge\obj\Debug\CodeChallenge.pdb
