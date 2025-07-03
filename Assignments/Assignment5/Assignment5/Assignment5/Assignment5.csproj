@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5C018786-CC57-432D-AAD5-7431CBAB7B8C}</ProjectGuid>
+    <ProjectGuid>{BF65BE40-658C-4275-A962-0B0BFE97B7BE}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>CodeChallenge</RootNamespace>
-    <AssemblyName>CodeChallenge</AssemblyName>
+    <RootNamespace>Assignment5</RootNamespace>
+    <AssemblyName>Assignment5</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>CodeChallenge.Question1</StartupObject>
+    <StartupObject>Assignment5.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
