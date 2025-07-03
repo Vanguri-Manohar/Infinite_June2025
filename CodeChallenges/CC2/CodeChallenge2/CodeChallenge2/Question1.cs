@@ -26,7 +26,7 @@ namespace CodeChallenge2
     {
         public Undergraduate(string name, int studentId, double grade) : base(name, studentId, grade) { }
        
-        //: base(name, studentId, grade) { }
+        
 
         public override bool IsPassed(double grade)
         {
