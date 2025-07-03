@@ -24,8 +24,9 @@ namespace CodeChallenge2
 
     class Undergraduate : Student
     {
-        public Undergraduate(string name, int studentId, double grade)
-        : base(name, studentId, grade) { }
+        public Undergraduate(string name, int studentId, double grade) : base(name, studentId, grade) { }
+       
+        //: base(name, studentId, grade) { }
 
         public override bool IsPassed(double grade)
         {
@@ -60,15 +61,17 @@ namespace CodeChallenge2
             Console.Write("Enter grade: ");
             double grade = double.Parse(Console.ReadLine());
 
-            Student student;
+            
 
             if (type.ToLower() == "undergraduate")
             {
-                student = new Undergraduate(name, id, grade);
+                Undergraduate  u= new Undergraduate(name, id, grade);
+                Console.WriteLine($"{u.Name} Passed: {u.IsPassed(u.Grade)}");
             }
             else if (type.ToLower() == "graduate")
             {
-                student = new Graduate(name, id, grade);
+                Graduate G= new Graduate(name, id, grade);
+                Console.WriteLine($"{G.Name} Passed: {G.IsPassed(G.Grade)}");
             }
             else
             {
@@ -76,7 +79,7 @@ namespace CodeChallenge2
                 return;
             }
 
-            Console.WriteLine($"{student.Name} Passed: {student.IsPassed(student.Grade)}");
+            
 
             Console.ReadLine();
         }
