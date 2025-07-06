@@ -1,0 +1,6 @@
+C:\Infinite_dotnet\Assignments\Assignment7\Assignment7\Classconsession\Classconsession\bin\Debug\Classconsession.dll
+C:\Infinite_dotnet\Assignments\Assignment7\Assignment7\Classconsession\Classconsession\bin\Debug\Classconsession.pdb
+C:\Infinite_dotnet\Assignments\Assignment7\Assignment7\Classconsession\Classconsession\obj\Debug\Classconsession.csproj.AssemblyReference.cache
+C:\Infinite_dotnet\Assignments\Assignment7\Assignment7\Classconsession\Classconsession\obj\Debug\Classconsession.csproj.CoreCompileInputs.cache
+C:\Infinite_dotnet\Assignments\Assignment7\Assignment7\Classconsession\Classconsession\obj\Debug\Classconsession.dll
+C:\Infinite_dotnet\Assignments\Assignment7\Assignment7\Classconsession\Classconsession\obj\Debug\Classconsession.pdb
