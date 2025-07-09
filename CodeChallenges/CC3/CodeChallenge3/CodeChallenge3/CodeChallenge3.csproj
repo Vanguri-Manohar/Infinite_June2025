@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F290DF83-7B7B-491D-9423-18B527054754}</ProjectGuid>
+    <ProjectGuid>{3AC6E645-E6E8-4E52-9F90-7BCA52F94F3A}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Assignment7</RootNamespace>
-    <AssemblyName>Assignment7</AssemblyName>
+    <RootNamespace>CodeChallenge3</RootNamespace>
+    <AssemblyName>CodeChallenge3</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -32,10 +32,10 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>CodeChallenge3.Question4</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Classconsession">
-      <HintPath>..\Classconsession\Classconsession\bin\Debug\Classconsession.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
