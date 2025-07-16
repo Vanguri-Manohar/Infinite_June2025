@@ -1,0 +1,7 @@
+C:\Infinite_dotnet\SQL CodeChallenges\CC1\CSharp\CC4\CC4\bin\Debug\CC4.exe.config
+C:\Infinite_dotnet\SQL CodeChallenges\CC1\CSharp\CC4\CC4\bin\Debug\CC4.exe
+C:\Infinite_dotnet\SQL CodeChallenges\CC1\CSharp\CC4\CC4\bin\Debug\CC4.pdb
+C:\Infinite_dotnet\SQL CodeChallenges\CC1\CSharp\CC4\CC4\obj\Debug\CC4.csproj.AssemblyReference.cache
+C:\Infinite_dotnet\SQL CodeChallenges\CC1\CSharp\CC4\CC4\obj\Debug\CC4.csproj.CoreCompileInputs.cache
+C:\Infinite_dotnet\SQL CodeChallenges\CC1\CSharp\CC4\CC4\obj\Debug\CC4.exe
+C:\Infinite_dotnet\SQL CodeChallenges\CC1\CSharp\CC4\CC4\obj\Debug\CC4.pdb
