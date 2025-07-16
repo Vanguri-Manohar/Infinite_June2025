@@ -83,9 +83,19 @@ add constraint fkcusid foreign key(customer_id) references customers(id)
 --Write a query to display the Date,Total no of customer placed order on same Date
 
 
-select date, COUNT(customer_id) 'No of Customers'
+select date, COUNT(distinct customer_id) 'No of Customers'
 from orders
 GROUP BY date;
+
+
+
+
+
+
+
+
+
+
 
 create table customers1(id int  primary key,Name varchar(20),Age int,
 address varchar(30),Salary float)
@@ -101,7 +111,6 @@ insert into customers1 values(1,'Ramesh',32,'Ahmedabad',2000.00),
 --Display the Names of the Employee in lower case, whose salary is null
 
 select LOWER(name) as emp from customers1 WHERE salary is NULL;
-
 create table studentdetails( id int  primary key,
 regno int,name varchar(20),age int,Qualification varchar(10),mobno bigint,
 mail_id varchar(20),location varchar(20),gender char)
