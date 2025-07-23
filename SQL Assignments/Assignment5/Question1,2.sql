@@ -11,13 +11,16 @@ use Assignment1
 --   g) Net Salary as Gross Salary - Deductions
 
 --Print the payslip neatly with all details
+select * from emp
+create or alter procedure proc_payslip(@empid int)
+as
 begin
 declare @salary int,@hra int,@da int,@it int,@deductions int,@GrossSalary int,@NetSalary int,@pf int
-set @salary=10000
+select @salary = salary from emp where Empno = @empid
 set @hra=0.1*@salary
 set @da=0.2*@salary
-set @pf=0.8*@salary
-set @it=0.5*@salary
+set @pf=0.08*@salary
+set @it=0.05*@salary
 set @deductions=@pf-@it
 if @pf<@it
 	begin 
@@ -34,7 +37,7 @@ print 'Pay Slip :'
           ' GrossSalary: ' + cast(@grosssalary as varchar(10)) + 
           ' NetSalary: ' + cast(@netsalary as varchar(10));
 end
-
+exec proc_payslip @empid = 7369
 
 --2.  Create a trigger to restrict data manipulation on EMP table during General holidays. Display the error message like “Due to Independence day you cannot manipulate data” or "Due To Diwali", you cannot manipulate" etc
 --Note: Create holiday table with (holiday_date,Holiday_name). Store at least 4 holiday details. try to match and stop manipulation 
