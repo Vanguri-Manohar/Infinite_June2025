@@ -56,33 +56,33 @@ select * from emp where DATEDIFF(YEAR, '2004-06-23', getdate())>=5 and MONTH(hir
 --        c. Delete first row.
 --After completing above all actions, recall the deleted row without losing increment of second row.
 --a
+begin transaction
 insert into emp values(1,'Manohar','SDE',7839,'2025-06-15',100000,300,20),
 (2,'Dinesh','Data Scientist',7839,'2025-06-12',34566,200,20),
 (3,'Jaya','SDE2',7839,'2025-06-11',8765,200,30)
 --b 
 
-update emp set salary = salary+(salary * 1.15) where empno=2
+update emp set salary = salary * 1.15 where empno=2
+
+save transaction p1
 
 select* from emp
-
-
-
-
-
 
 -- c. Delete first row.
 --After completing above all actions, recall the deleted row without losing increment of second row.
 
-
-select * into #TempEmployee FROM emp WHERE empno = 1
-
-
 delete from emp where empno = 1
+rollback transaction p1
+commit transaction
 select * from emp
 
-insert into Emp select * from #TempEmployee
 
-select * from dept
+
+
+
+
+
+
 
 
 
