@@ -61,7 +61,7 @@ insert into emp values(1,'Manohar','SDE',7839,'2025-06-15',100000,300,20),
 (3,'Jaya','SDE2',7839,'2025-06-11',8765,200,30)
 --b 
 
-update emp set salary = salary+(salary * 1.15) where empno=2
+update emp set salary = salary * 1.15 where empno=2
 
 select* from emp
 
