@@ -63,11 +63,8 @@ insert into emp values(1,'Manohar','SDE',7839,'2025-06-15',100000,300,20),
 --b 
 
 update emp set salary = salary * 1.15 where empno=2
-<<<<<<< HEAD
 
 save transaction p1
-=======
->>>>>>> 74f0cace4fc856a3a824804cdaf460aac31a088d
 
 select* from emp
 
