@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Question6</title>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+
+
+
+    <ul class="Test">
+        <li>CSHARP</li>
+        <li>SQL</li>
+        <li>ADO</li>
+    </ul>
+
+    <p id="res"></p>
+    <button id="show">Show First Element</button>
+
+  
+    <script>
+        $(document).ready(function () {
+            $('#show').click(function () {
+                var el = $('.Test li').first().text();
+                $('#res').text("The element is " + el);
+            });
+        });
+    </script>
+
+
+
+
+</body>
+</html>

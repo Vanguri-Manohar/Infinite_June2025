@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Even Odd</title>
+</head>
+<body>
+
+    <p id="EvenOdd"></p>
+    
+    <script>
+        var output = "";
+        var res = document.getElementById("EvenOdd");
+        for (let i = 0; i <= 15; i++) {
+            if (i % 2 === 0) {
+                output += i + " Is Even <br>";
+            }
+            else {
+                output += i + " Is Odd <br>";
+            }
+        }
+        res.innerHTML = output;
+    </script>
+
+</body>
+</html>

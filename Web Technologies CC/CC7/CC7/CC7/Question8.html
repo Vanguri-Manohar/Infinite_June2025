@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Question8</title>
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+
+
+    Enter the Input: <input type="text" id="myInput" placeholder="Enter the input">
+    <div id="message"></div>
+
+   
+<script>
+    $(document).ready(function () {
+        $('#myInput').on('change', function () {
+            $('#message').append('<p>You changed the input: ' + $(this).val() + '</p>');
+        });
+    });
+</script>
+
+
+</body>
+</html>

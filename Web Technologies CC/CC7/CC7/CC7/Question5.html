@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Parent</title>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+    <h1> This is outside Div</h1>
+    <div>
+        <h1> Div is Direct Parent</h1>
+        <h1> This is inside div</h1>
+        <h1>This is inside div</h1>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+
+
+            $("div > h1").css("background-color", "lightblue");
+
+        });
+    </script>
+</body>
+</html>
