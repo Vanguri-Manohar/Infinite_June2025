@@ -229,7 +229,7 @@ namespace MiniProj
                 SqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    Console.WriteLine($"Booking ID: {reader["booking_id"]}, Train No: {reader["tno"]}, User ID: {reader["userid"]}, Seats: {reader["seats_booked"]}, Date: {reader["booking_date"]}");
+                    Console.WriteLine($"Booking ID: {reader["booking_id"]}, Train No: {reader["tno"]}, User ID: {reader["userid"]}, Seats: {reader["seats_booked"]}, Date: {reader["booking_date"]},Name: {reader["Name"]}");
                 }
             }
         }
@@ -434,18 +434,28 @@ namespace MiniProj
                             return;
                         }
 
-                        SqlCommand bookCmd = new SqlCommand("INSERT INTO Bookings (tno, userid, seats_booked, booking_date,Name) VALUES (@tno, @userid, @seats_booked, @booking_date,@Name)", con);
+
+                     SqlCommand bookCmd = new SqlCommand(
+                        "INSERT INTO Bookings (tno, userid, seats_booked, booking_date, Name) " +
+                        "VALUES (@tno, @userid, @seats_booked, @booking_date, @Name); " +
+                        "SELECT SCOPE_IDENTITY();", con);
+
                         bookCmd.Parameters.AddWithValue("@tno", trainNumber);
                         bookCmd.Parameters.AddWithValue("@userid", userid);
                         bookCmd.Parameters.AddWithValue("@seats_booked", seatsToBook);
                         bookCmd.Parameters.AddWithValue("@booking_date", DateTime.Now);
                         bookCmd.Parameters.AddWithValue("@Name", Name);
-                        bookCmd.ExecuteNonQuery();
+                     
+                        int booking_id = Convert.ToInt32(bookCmd.ExecuteScalar());
+                    
+                        
 
                         SqlCommand updateCmd = new SqlCommand("UPDATE Trains SET seats_available = seats_available - @seats_booked WHERE tno = @tno", con);
                         updateCmd.Parameters.AddWithValue("@seats_booked", seatsToBook);
                         updateCmd.Parameters.AddWithValue("@tno", trainNumber);
                         updateCmd.ExecuteNonQuery();
+
+                   
 
                         Console.WriteLine("Booking successful.");
 
@@ -455,7 +465,8 @@ namespace MiniProj
 
                         decimal totalFare = pricePerSeat * seatsToBook;
                         Console.WriteLine("\n===== Booking Bill  =====");
-                        
+
+                        Console.WriteLine($"Booking_id   :  {booking_id}");
                         Console.WriteLine($"Train Number   : {trainNumber}");
                         Console.WriteLine($"Train Name     : {TrainName}");
                         Console.WriteLine($"Class          : {class_of_travel }");
