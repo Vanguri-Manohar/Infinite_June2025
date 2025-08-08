@@ -8,7 +8,7 @@ using System.Data.SqlClient;
 
 namespace MiniProj
 {
-    class Program
+    public class Program
     {
 
         static string connectionString = "Data Source=ICS-LT-D72BJ84\\SQLEXPRESS;Initial Catalog=Assignment1;user id=sa;password=Manohar@2004; ";
@@ -55,7 +55,7 @@ namespace MiniProj
             else Console.WriteLine("Invalid admin credentials.");
         }
 
-        static string AuthenticateAdmin(string username, string password)
+        public static string AuthenticateAdmin(string username, string password)
         {
             using (SqlConnection con = new SqlConnection(connectionString))
             {
@@ -68,6 +68,8 @@ namespace MiniProj
             }
         }
 
+      
+        static int currentUserId = -1;
         static void UserLogin()
         {
             Console.Write("Enter user username: ");
@@ -75,27 +77,34 @@ namespace MiniProj
             Console.Write("Enter password: ");
             string password = Console.ReadLine();
 
-            string role = AuthenticateUser(username, password);
-            if (role == "user")
+            var result = AuthenticateUser(username, password);
+            if (result.role == "user")
             {
-                Console.WriteLine($"Login successful. Welcome, {username} ({role})");
-                UserMenu();
+                currentUserId = result.userId; 
+                Console.WriteLine($"Login successful. Welcome, {username} ({result.role}) ({result.userId})");
+                UserMenu(); 
             }
             else Console.WriteLine("Invalid user credentials.");
         }
-
-        static string AuthenticateUser(string username, string password)
+        public static (string role, int userId) AuthenticateUser(string username, string password)
         {
             using (SqlConnection con = new SqlConnection(connectionString))
             {
                 con.Open();
-                SqlCommand cmd = new SqlCommand("SELECT role FROM Users WHERE username = @username AND password = @password", con);
+                SqlCommand cmd = new SqlCommand("SELECT role, userid FROM Users WHERE username = @username AND password = @password", con);
                 cmd.Parameters.AddWithValue("@username", username);
                 cmd.Parameters.AddWithValue("@password", password);
                 SqlDataReader reader = cmd.ExecuteReader();
-                return reader.Read() ? reader["role"].ToString() : null;
+                if (reader.Read())
+                {
+                    string role = reader["role"].ToString();
+                    int userId = (int)reader["userid"];
+                    return (role, userId);
+                }
+                return (null, -1);
             }
         }
+
 
 
 
@@ -387,6 +396,14 @@ namespace MiniProj
         {
             Console.Write("Enter your User ID: ");
             int userid = Convert.ToInt32(Console.ReadLine());
+
+
+            if (userid != currentUserId)
+            {
+                Console.WriteLine("You are not authorized to book tickets with this User ID.");
+                return;
+            }
+
             Console.WriteLine("Enter The Name of the Person");
             string Name = Console.ReadLine();
             Console.Write("Enter Train Number: ");
@@ -405,16 +422,7 @@ namespace MiniProj
             {
                 con.Open();
 
-                SqlCommand userCheckCmd = new SqlCommand("SELECT COUNT(*) FROM Users WHERE userid = @userid", con);
-                userCheckCmd.Parameters.AddWithValue("@userid", userid);
-                int userExists = (int)userCheckCmd.ExecuteScalar();
-
-                if (userExists == 0)
-                {
-                    Console.WriteLine("User not found.");
-                    return;
-                }
-
+           
                 SqlCommand checkCmd = new SqlCommand("SELECT * FROM Trains WHERE tno = @tno AND train_status = 'active'", con);
                 checkCmd.Parameters.AddWithValue("@tno", trainNumber);
                 SqlDataReader reader = checkCmd.ExecuteReader();
@@ -483,6 +491,7 @@ namespace MiniProj
             }
         }
 
+       
         static void CancelTickets()
         {
             Console.Write("Enter Booking ID: ");
@@ -493,16 +502,23 @@ namespace MiniProj
             using (SqlConnection con = new SqlConnection(connectionString))
             {
                 con.Open();
-                SqlCommand checkCmd = new SqlCommand("SELECT tno, seats_booked, booking_date FROM Bookings WHERE booking_id = @booking_id", con);
+                SqlCommand checkCmd = new SqlCommand("SELECT userid, tno, seats_booked, booking_date FROM Bookings WHERE booking_id = @booking_id", con);
                 checkCmd.Parameters.AddWithValue("@booking_id", bookingId);
                 SqlDataReader reader = checkCmd.ExecuteReader();
 
                 if (reader.Read())
                 {
+                    int userId = (int)reader["userid"];
                     int trainNumber = (int)reader["tno"];
                     int seatsBooked = (int)reader["seats_booked"];
                     DateTime bookingDate = (DateTime)reader["booking_date"];
                     reader.Close();
+
+                    if (userId != currentUserId)
+                    {
+                        Console.WriteLine("You are not authorized to cancel this booking.");
+                        return;
+                    }
 
                     if (seatsToCancel > seatsBooked)
                     {
@@ -539,6 +555,7 @@ namespace MiniProj
                 else Console.WriteLine("Booking not found.");
             }
         }
+
     }
 }
 
