@@ -1,0 +1,55 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Master.cs" Inherits="Electricity_Prj.Site1" %>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Electricity Board</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header, footer {
+            text-align: center;
+            padding: 10px;
+        }
+
+        .nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .nav a {
+            display: inline-block;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <form runat="server">
+        <header>
+        <h2>Electricity Board Bills</h2>
+    </header>
+
+    <div class="nav">
+        <a href="Login.aspx">Login</a>
+        <a href="Default.aspx">Default</a>
+        <a href="AddBills.aspx">Add Bills</a>
+        <a href="ViewBills.aspx">View Bills</a>
+        <asp:LinkButton ID ="btnLogout" runat="server" OnClick="btnLogout_Click">Logout</asp:LinkButton>
+    </div>
+    <section>
+        <article>
+            <asp:ContentPlaceHolder ID="PrimaryContent" runat="server"></asp:ContentPlaceHolder>
+        </article>
+    </section>
+    </form>
+    <footer>
+        &copy; Electricity Board EB
+    </footer>
+</body>
+</html>
