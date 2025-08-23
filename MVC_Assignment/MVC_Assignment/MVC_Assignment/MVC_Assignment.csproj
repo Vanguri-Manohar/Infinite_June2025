@@ -148,6 +148,10 @@
     <Compile Include="Migrations\202508230932054_Initial Create.Designer.cs">
       <DependentUpon>202508230932054_Initial Create.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202508231558306_SyncModel.cs" />
+    <Compile Include="Migrations\202508231558306_SyncModel.Designer.cs">
+      <DependentUpon>202508231558306_SyncModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Contact.cs" />
     <Compile Include="Models\ContactContext.cs" />
@@ -193,6 +197,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Contact\Index.cshtml" />
     <Content Include="Views\Contact\Create.cshtml" />
+    <Content Include="Views\Contact\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -213,6 +218,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202508230932054_Initial Create.resx">
       <DependentUpon>202508230932054_Initial Create.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202508231558306_SyncModel.resx">
+      <DependentUpon>202508231558306_SyncModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

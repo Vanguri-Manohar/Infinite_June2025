@@ -90,3 +90,5 @@ C:\Users\saisatyam\Desktop\Csharp\MVC\MVC_Assignment\MVC_Assignment\bin\System.T
 C:\Users\saisatyam\Desktop\Csharp\MVC\MVC_Assignment\MVC_Assignment\bin\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\saisatyam\Desktop\Csharp\MVC\MVC_Assignment\MVC_Assignment\bin\Unity.Abstractions.pdb
 C:\Users\saisatyam\Desktop\Csharp\MVC\MVC_Assignment\MVC_Assignment\bin\Unity.Container.pdb
+C:\Users\saisatyam\Desktop\Csharp\MVC\MVC_Assignment\MVC_Assignment\obj\Debug\MVC_Assignment.csproj.AssemblyReference.cache
+C:\Users\saisatyam\Desktop\Csharp\MVC\MVC_Assignment\MVC_Assignment\obj\Debug\MVC_Assignment.Migrations.SyncModel.resources
