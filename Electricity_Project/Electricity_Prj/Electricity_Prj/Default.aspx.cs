@@ -11,7 +11,11 @@ namespace Electricity_Prj
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Response.Write("Hello Admin");
+            if (!User.Identity.IsAuthenticated)
+            {
+                Response.Redirect("~/Login.aspx");
+            }
+         
         }
 
       

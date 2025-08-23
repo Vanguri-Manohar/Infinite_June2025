@@ -36,10 +36,10 @@
     </header>
 
     <div class="nav">
-        <a href="Login.aspx">Login</a>
-        <a href="Default.aspx">Default</a>
-        <a href="AddBills.aspx">Add Bills</a>
-        <a href="ViewBills.aspx">View Bills</a>
+        <asp:HyperLink ID ="login" runat="server" NavigateUrl="~/Login.aspx" Text="Login"></asp:HyperLink>
+        <asp:HyperLink ID="adefault" runat="server" NavigateUrl="~/Default.aspx" Text="Default"></asp:HyperLink>
+        <asp:HyperLink ID="add" runat="server" NavigateUrl="~/AddBills.aspx" Text="Add Bills"></asp:HyperLink>
+        <asp:HyperLink ID="view" runat="server" NavigateUrl="~/ViewBills.aspx" Text="View Bills"></asp:HyperLink>
         <asp:LinkButton ID ="btnLogout" runat="server" OnClick="btnLogout_Click">Logout</asp:LinkButton>
     </div>
     <section>

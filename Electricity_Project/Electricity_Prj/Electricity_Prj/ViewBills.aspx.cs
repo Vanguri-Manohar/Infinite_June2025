@@ -12,7 +12,10 @@ namespace Electricity_Prj
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!User.Identity.IsAuthenticated)
+            {
+                Response.Redirect("~/Login.aspx");
+            }
         }
 
         protected void btnview_Click(object sender, EventArgs e)
@@ -22,7 +25,12 @@ namespace Electricity_Prj
             ElectricityBoard eb = new ElectricityBoard();
             var bills = eb.Generate_N_BillDetails(n);
             GridView1.DataSource = bills;
-            GridView1.DataBind();       
+            GridView1.DataBind();
+            nbills.Visible = true;
+            for (int i = 0; i < n; i++)
+            {
+                nbills.Text += $"<p>EB Bill for {bills[i].ConsumerName} is {bills[i].BillAmount}</p>";
+            }
         }
     }
 }

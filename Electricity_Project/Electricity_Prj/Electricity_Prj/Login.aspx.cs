@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Web.Security;
 
 namespace Electricity_Prj
 {
@@ -16,17 +17,14 @@ namespace Electricity_Prj
 
         protected void btnlogin_Click(object sender, EventArgs e)
         {
-            var username = "admin";
-            var password = "admin@123";
-            if (txtusername.Text == username && txtpassword.Text == password)
+            if (FormsAuthentication.Authenticate(txtusername.Text, txtpassword.Text))
             {
-                txtlabelmsg.Text = "Validation Success";
-                txtlabelmsg.ForeColor = System.Drawing.Color.Green;
-                Response.Redirect("~/Default.aspx");
+                Session["User"] = txtusername.Text;
+                FormsAuthentication.RedirectFromLoginPage(txtusername.Text, false);
             }
             else
             {
-                txtlabelmsg.Text = "Validation Failed";
+                txtlabelmsg.Text = "Invalid User Name or Password";
                 txtlabelmsg.ForeColor = System.Drawing.Color.Red;
             }
         }

@@ -8,6 +8,10 @@ namespace Electricity_Prj
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!User.Identity.IsAuthenticated)
+            {
+                Response.Redirect("~/Login.aspx");
+            }
             if (IsPostBack && ViewState["BillCount"] != null)
             {
                 int count = (int)ViewState["BillCount"];
@@ -87,6 +91,7 @@ namespace Electricity_Prj
                         {
                             eb.CalculateBill(bill);
                             eb.AddBill(bill);
+                            status.Text += $"<p style='color:green;'>Saved Bill {i}</p>";
                         }
                         else
                         {
