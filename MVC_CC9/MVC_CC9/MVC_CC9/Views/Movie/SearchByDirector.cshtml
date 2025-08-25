@@ -1,0 +1,11 @@
+﻿@{
+    ViewBag.Title = "Search Movies by Director";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<form method="post" action="/Movie/SearchByDirector">
+    <label for="directorName">Enter Director Name:</label>
+    <input type="text" name="directorName" id="directorName" required />
+    <input type="submit" value="Search" />
+</form>

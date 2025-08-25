@@ -78,9 +78,43 @@ namespace MVC_CC9.Controllers
             _repository.Delete(movie.MovieId);
             return RedirectToAction("Index");
         }
+        public ActionResult SearchByYear()
+        {
+            return View();
+        }
 
+        [HttpPost]
+        public ActionResult SearchByYear(int year)
+        {
+            return RedirectToAction("MoviesByYear", new { year });
+        }
+        public ActionResult MoviesByYear(int year)
+        {
+            var movies = _repository.GetByYear(year);
+            ViewBag.Year = year;
+            return View(movies);
+        }
 
+        public ActionResult SearchByDirector()
+        {
+            return View();
+        }
 
+        [HttpPost]
+        public ActionResult SearchByDirector(string directorName)
+        {
+            return RedirectToAction("MoviesByDirector", new { directorName });
+        }
+
+        public ActionResult MoviesByDirector(string directorName)
+        {
+            var movies = _repository.GetByDirector(directorName);
+            ViewBag.Director = directorName;
+            return View(movies);
+        }
 
     }
+
 }
+
+
