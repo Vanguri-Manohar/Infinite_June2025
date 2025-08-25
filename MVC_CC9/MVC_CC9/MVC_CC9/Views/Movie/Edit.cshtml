@@ -1,0 +1,24 @@
+﻿@model MVC_CC9.Models.Movie
+
+<h2>Edit Movie</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(m => m.MovieId)
+    <div class="form-horizontal">
+        <div class="form-group">
+            @Html.LabelFor(m => m.MovieName)
+            @Html.TextBoxFor(m => m.MovieName, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.DirectorName)
+            @Html.TextBoxFor(m => m.DirectorName, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.DateOfRelease)
+            @Html.TextBoxFor(m => m.DateOfRelease, "{0:yyyy-MM-dd}", new { @class = "form-control", type = "date" })
+        </div>
+        <button type="submit" class="btn btn-primary">Save</button>
+    </div>
+}

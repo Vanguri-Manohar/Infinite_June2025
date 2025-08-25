@@ -1,0 +1,23 @@
+﻿@model MVC_CC9.Models.Movie
+
+<h2>Movie Details</h2>
+
+<div>
+    <dl class="dl-horizontal">
+        <dt>Movie Name</dt>
+        <dd>@Model.MovieName</dd>
+
+        <dt>Director</dt>
+        <dd>@Model.DirectorName</dd>
+
+        <dt>Release Date</dt>
+        <dd>@Model.DateOfRelease.ToShortDateString()</dd>
+    </dl>
+</div>
+
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MovieId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+
+

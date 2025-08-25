@@ -1,0 +1,16 @@
+﻿@model MVC_CC9.Models.Movie
+
+<h2>Delete Movie</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <strong>@Model.MovieName</strong> by <strong>@Model.DirectorName</strong> released on <strong>@Model.DateOfRelease.ToShortDateString()</strong>
+</div>
+
+@using (Html.BeginForm("Delete", "Movie", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(m => m.MovieId)
+    <button type="submit" class="btn btn-danger">Delete</button>
+    @Html.ActionLink("Cancel", "Index", null, new { @class = "btn btn-secondary" })
+}
